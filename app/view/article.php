@@ -11,7 +11,7 @@
         <div id="xtraInfo">
             <div id="text">
                 <p id="date"><em><?=$art['date']?></em></p>
-                <p id="category"><a href="<?=HOME_URL.'/articles/search/?cat='.$art['category']?>">#<?=$art['category']?></a></p>
+                <p id="category"><a href="<?=HOME_URL.'/articles/search/?cat='.$art['catid']?>">#<?=$art['category']?></a></p>
             </div>
             <button id="clipboardButton" onclick="copyToClipboard(this)" style="background-color:<?=$pj['color']?>;">URLをコピーする</button>
         </div>

@@ -66,7 +66,7 @@ class Article extends DBoperation{
     public static function article(string $column='', string $value=''){
         try{
             // join pid and cid
-            $stmt = 'SELECT articles.*, projects.name AS name, projects.color AS color, categories.name AS category FROM articles 
+            $stmt = 'SELECT articles.*, projects.name AS name, projects.color AS color, categories.name AS category, categories.id AS catid FROM articles 
             JOIN projects ON articles.project_id = projects.id 
             JOIN categories ON articles.category_id = categories.id 
             WHERE articles.'.$column.' = :value';

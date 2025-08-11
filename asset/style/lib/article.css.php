@@ -108,4 +108,97 @@
         padding-bottom: 1rem;
     }
 }
+#recommendations-title{
+    text-align:center;
+    margin: 0;
+    padding: 0.75rem 0;
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+}
+#recomendations{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    .recommendation{
+        min-height: 20rem;
+        max-height: 25rem;
+        position: relative;
+        overflow: hidden;
+        .thumb{
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            z-index: -1;
+        }
+        .artDate{
+            position: absolute;
+            top: 0;
+            margin: 0;
+            padding: 0.25rem;
+            color: #fff;
+            font-size: clamp(0.875rem, 1.75vw, 1.05rem);
+        }
+        .card{
+            position: absolute;
+            bottom: 0;
+            min-height: 50%;
+            padding: 0 0.25rem;
+            width: calc(100% - 0.5rem);
+            transform: translateY(114px);
+            transition: all 180ms;
+            .artProject{
+                margin: 0.5rem;
+                color: #fff;
+                height: 1.5rem;
+                font-size: clamp(0.875rem, 1.75vw, 1.05rem);
+            }
+            .artTitle{
+                margin: 0.5rem;
+                font-size: clamp(1.125rem, 2vw, 1.25rem);
+                height: 5rem;
+                align-content: center;
+                .artTitleLink{
+                    color: #fff;
+                }
+            }
+            .artMain{
+                height: 70px;
+                margin: 0.5rem;
+                color: #fff;
+                font-size: clamp(0.9375rem, 1.75vw, 1.025rem);
+                align-content: center;
+            }
+            .detailsLabel{
+                height: 2rem;
+                font-size: clamp(0.875rem, 1.75vw, 1rem);
+                margin: 0 auto;
+                width: fit-content;
+                text-align: center;
+                position: relative;
+                color: #fff;
+                .detailsLabelLink{
+                    color: #fff;
+                }
+            }
+            .detailsLabel::after{
+                content: "→";
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(1.25rem, -85%);
+                transition: all 0.3s;
+            }
+            .detailsLabel:hover::after{
+                transform: translate(1.5rem, -85%);
+                opacity: 1;
+            }
+        }
+    }
+    .recommendation:hover{
+        .card{
+            transform: translateY(0);
+        }
+    }
+}
 </style>

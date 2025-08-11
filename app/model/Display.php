@@ -13,6 +13,16 @@ class Display extends DBoperation{
         $query = new DBstatement($stmt);
         return $query->execute([]);
     }
+    public static function recommend(){
+        $stmt = 'SELECT articles.*, projects.name AS name, projects.color AS color, categories.name AS category
+        FROM articles 
+        JOIN projects ON articles.project_id = projects.id 
+        JOIN categories ON articles.category_id = categories.id 
+        ORDER BY RANDOM() LIMIT 4';
+        $query = new DBstatement($stmt);
+        
+        return $query->execute([]);
+    }
     public static function articles_pj(string $pjid, string $limit='', string $offset='0'){
         if(!empty($limit)){
             $limit = ' LIMIT '.$limit.' OFFSET '.$offset;
