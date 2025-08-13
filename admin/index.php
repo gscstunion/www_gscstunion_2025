@@ -90,10 +90,7 @@ include_once(VIEW_DIR.'/html-header.php');
         <p>不明点や不具合がある場合は管理者にお問い合わせください。</p>
     </div>
     <div id="usefullinks">
-        <div class="ulink"><a href="https://aguinfo.jm.aoyama.ac.jp/AGUInfo/message_list.aspx" target="_blank">学生ポータル</a></div>
-        <div class="ulink"><a href="https://cp.aim.aoyama.ac.jp/lms/lginLgir/#" target="_blank">コースパワー</a></div>
         <div class="ulink"><a href="https://classroom.google.com" target="_blank">Googleクラスルーム</a></div>
-        <div class="ulink"><a href="https://drive.google.com/drive/folders/1zLY-OA-zHRTRMeDE54GVT7hlu9afAaNJ" target="_blank">PJ資料</a></div>
     </div>
 </main>
 <?php
