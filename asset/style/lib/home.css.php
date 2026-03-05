@@ -401,6 +401,7 @@ main{
                     min-height: 20%;
                     padding: 0 0.25rem;
                     transform: translateY(28px);
+                    width: calc(100% - 0.5rem);
                     transition: all 180ms;
                     .artProject{
                         margin: 0.5rem;
